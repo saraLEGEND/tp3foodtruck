@@ -10,7 +10,7 @@ François Potvin
 
 - Nouvelle release GitHub
 
-
+[![tag-release](https://github.com/saraLEGEND/tp3foodtruck/actions/workflows/release.yml/badge.svg)](https://github.com/saraLEGEND/tp3foodtruck/actions/workflows/release.yml)
 
 - Publish GitHub
 
