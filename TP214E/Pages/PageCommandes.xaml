@@ -1,0 +1,70 @@
+﻿<Page x:Class="TP214E.Pages.PageCommandes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TP214E.Pages"
+        mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800"
+        Title="PageCommandes" >
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.1*"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="1" Grid.Column="1" Content="PRISE DE COMMANDE" Foreground="#FFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="12" FontWeight="Bold" Margin="0,0,10,0"/>
+        <Label Grid.Row="1" Grid.Column="3" Content="COMMANDE" Foreground="#FFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="12" FontWeight="Bold" Margin="0,0,10,0"/>
+        <Label Grid.Row="2" Grid.Column="1" Content="Liste des plats" Foreground="#FFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="12" FontWeight="Bold" Margin="0,0,10,0"/>
+        <Label Grid.Row="2" Grid.Column="3" Content="Quantités - Items - Prix" Foreground="#FFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="12" FontWeight="Bold" Margin="0,0,10,0"/>
+        <Label Grid.Row="5" Grid.Column="3" Content="Total de la commande :" Foreground="#FFF" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="12" FontWeight="Bold" Margin="0,0,10,0"/>
+        <Label x:Name="LblTotalCommande" Grid.Row="5" Grid.Column="3" Content="$" Foreground="#FFF" HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="12" FontWeight="Bold" Margin="0,0,10,0"/>
+        <Label x:Name="LblConfirmCommande" Grid.Row="0" Grid.Column="1" Content="COMMANDE CRÉÉE" Background="GreenYellow" Foreground="#CC5F8C5A" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="24" FontWeight="Bold" Margin="0,0,10,0"/>
+
+        <ListBox x:Name="LstPlats" Grid.Row="3" Grid.Column="1" />
+        <ListBox x:Name="LstCommande" Grid.Row="3" Grid.Column="3" />
+
+        <Button x:Name="BtnRetourAccueil" Grid.Row="0" Grid.Column="0" Content="retour" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="80" Click="BtnRetourAccueil_Click"/>
+
+        <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal"  >
+            <Border Background="black">
+                <Button 
+                    x:Name="BtnCommander" Content="Commander" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="90" Click="BtnCommander_Click" />
+            </Border>
+            <Border Background="black">
+                <Button x:Name="BtnEffacer" Content="Effacer" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="76" Click="BtnEffacer_Click"/>
+            </Border>
+            <Border Background="black">
+                <Button x:Name="BtnHistorique" Content="Historique" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="80" Click="BtnHistorique_Click"/>
+            </Border>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical"  >
+            <Border Background="black">
+                <Button 
+                    x:Name="BtnAjouter" Content="Ajouter" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="90" Click="BtnAjouterPlat_Click" />
+            </Border>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="4" Orientation="Vertical"  >
+            <Border Background="black">
+                <Button 
+                    x:Name="BtnAugmenterQte" Content="+" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="40" Click="BtnAugmenterQte_Click" />
+            </Border>
+            <Border Background="black">
+                <Button x:Name="BtnDiminuerQte" Content="-" Background="#CC5F8C5A" BorderBrush="White" Foreground="White" BorderThickness="2,2,2,2" Padding="10,5" FontSize="12" Height="40" Width="40" Click="BtnDiminuerQte_Click"/>
+            </Border>
+        </StackPanel>
+
+    </Grid>
+</Page>
